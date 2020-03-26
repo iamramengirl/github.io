@@ -1,8 +1,29 @@
 <!DOCTYPE html>
 <html>
-	<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
 
 		<title>PHDashboard</title>
+		
+		 <style>
+.left, .right {
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+
+.main {
+  float: left;
+  width: 60%; /* The width is 60%, by default */
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+</style> 
 
 		<style type="text/css">
     /*!
@@ -11402,42 +11423,42 @@ ul.typeahead-list  > li > a.pull-right {
 							</div>
 						</div>
 						<div class="text_cell_render border-box-sizing rendered_html" style="overflow: hidden;">
-							<div class="container" style="overflow: hidden;">
-								<div class="row" style="overflow: hidden;">
-									<div class="main_counter_content text-center white-text wow fadeInUp" style="overflow: hidden;">
-										<div class="col-md-2">
-											<div style="margin-left: 20px; padding-top: 35px; padding-bottom: 20px; background: rgb(235, 87, 87); color: #fff; border-radius:25px; width: 200px; height: 180px;">
-												<span style="font-family: 'Century Gothic'; font-size:16px; font-weight: bold;">CONFIRMED CASES</span>
-												<h3 class="statistic-counter" style="margin:0 0 0 0;  font-family: 'Century Gothic'; font-size:85px; font-weight: bold;">707</h3>
-											</div>
+						<div class="container" style="overflow: hidden;">
+							<div class="row" style="overflow: hidden;">
+								<div class="main_counter_content text-center white-text wow fadeInUp" style="overflow: hidden;">
+									<div class="col-md-2">
+										<div style="margin-left: 20px; padding-top: 35px; padding-bottom: 20px; background: rgb(235, 87, 87); color: #fff; border-radius:25px; width: 200px; height: 180px;">
+											<span style="font-family: 'Century Gothic'; font-size:16px; font-weight: bold;">CONFIRMED CASES</span>
+											<h3 class="statistic-counter" style="margin:0 0 0 0;  font-family: 'Century Gothic'; font-size:85px; font-weight: bold;">707</h3>
 										</div>
-										<div class="col-md-2">
-											<div style="margin-left: 60px; padding-top: 35px; padding-bottom: 20px; background: rgb(255, 255, 255); color: rgb(149, 163, 174); border-radius:25px; border-style: solid; width: 180px; height: 180px;">
-												<span style="font-family: 'Century Gothic'; font-size:16px; font-weight: bold;">DEATHS</span>
-												<h3 class="statistic-counter" style="margin:0 0 0 0; font-family: 'Century Gothic'; font-size:85px; font-weight: bold;">45</h3>
-											</div>
+									</div>
+									<div class="col-md-2">
+										<div style="margin-left: 60px; padding-top: 35px; padding-bottom: 20px; background: rgb(255, 255, 255); color: rgb(149, 163, 174); border-radius:25px; border-style: solid; width: 180px; height: 180px;">
+											<span style="font-family: 'Century Gothic'; font-size:16px; font-weight: bold;">DEATHS</span>
+											<h3 class="statistic-counter" style="margin:0 0 0 0; font-family: 'Century Gothic'; font-size:85px; font-weight: bold;">45</h3>
 										</div>
-										<div class="col-md-2">
-											<div style="margin-left: 80px; padding-top: 35px; padding-bottom: 20px; background: rgb(255, 255, 255); color: rgb(128, 0, 0); border-radius:25px; border-style: solid; width: 180px; height: 180px;">
-												<span style="font-family: 'Century Gothic'; font-size:16px; font-weight: bold;">CRITICAL</span>
-												<h3 class="statistic-counter" style="margin:0 0 0 0; font-family: 'Century Gothic'; font-size:85px; font-weight: bold;">4</h3>
-											</div>
+									</div>
+									<div class="col-md-2">
+										<div style="margin-left: 80px; padding-top: 35px; padding-bottom: 20px; background: rgb(255, 255, 255); color: rgb(128, 0, 0); border-radius:25px; border-style: solid; width: 180px; height: 180px;">
+											<span style="font-family: 'Century Gothic'; font-size:16px; font-weight: bold;">CRITICAL</span>
+											<h3 class="statistic-counter" style="margin:0 0 0 0; font-family: 'Century Gothic'; font-size:85px; font-weight: bold;">4</h3>
 										</div>
-										<div class="col-md-2">
-											<div style="margin-left: 100px; padding-top: 35px; padding-bottom: 20px; background: rgb(255, 255, 255); color: rgb(206, 17, 38); border-radius:25px; border-style: solid; width: 180px; height: 180px;">
-												<span style="font-family: 'Century Gothic'; font-size:16px; font-weight: bold;">SERIOUS</span>
-												<h3 class="statistic-counter" style="margin:0 0 0 0; font-family: 'Century Gothic'; font-size:85px; font-weight: bold;">9</h3>
-											</div>
+									</div>
+									<div class="col-md-2">
+										<div style="margin-left: 100px; padding-top: 35px; padding-bottom: 20px; background: rgb(255, 255, 255); color: rgb(206, 17, 38); border-radius:25px; border-style: solid; width: 180px; height: 180px;">
+											<span style="font-family: 'Century Gothic'; font-size:16px; font-weight: bold;">SERIOUS</span>
+											<h3 class="statistic-counter" style="margin:0 0 0 0; font-family: 'Century Gothic'; font-size:85px; font-weight: bold;">9</h3>
 										</div>
-										<div class="col-md-2">
-											<div style="margin-left: 120px; padding-top: 35px; padding-bottom: 20px; background: rgb(255, 255, 255); color: rgb(39, 174, 96); border-radius:25px; border-style: solid; width: 180px; height: 180px;">
-												<span style="font-family: 'Century Gothic'; font-size:16px; font-weight: bold;">RECOVERED</span>
-												<h3 class="statistic-counter" style="margin:0 0 0 0; font-family: 'Century Gothic'; font-size:85px; font-weight: bold;">28</h3>
-											</div>
+									</div>
+									<div class="col-md-2">
+										<div style="margin-left: 120px; padding-top: 35px; padding-bottom: 20px; background: rgb(255, 255, 255); color: rgb(39, 174, 96); border-radius:25px; border-style: solid; width: 180px; height: 180px;">
+											<span style="font-family: 'Century Gothic'; font-size:16px; font-weight: bold;">RECOVERED</span>
+											<h3 class="statistic-counter" style="margin:0 0 0 0; font-family: 'Century Gothic'; font-size:85px; font-weight: bold;">28</h3>
 										</div>
 									</div>
 								</div>
 							</div>
+						</div>
 						</div>
 
 						<div style="margin-left:-150px; height:800; width:2000;">
