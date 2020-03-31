@@ -1,1 +1,429 @@
-welcome
+<html> 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<style> 
+body {
+    background: #555;
+}
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+}
+.container {
+	float: left;
+	width: 100%;
+	background: white;
+	text-align: center;
+	padding: 15px;
+	display:block;
+    margin:auto;
+}
+.title-area {
+    width: 50%;
+    float: left;
+	/*padding-left: 2%*/
+}
+.date-area {
+    width: 50%;
+    margin-left: 55%;
+ }
+.title-text{ 
+    font-family: 'Helvetica';
+    font-size: 27px;
+} 
+.updated-text{
+    font-family: 'Helvetica';
+    font-size: 12px;
+	padding-left: 2%;
+} 
+.date-text{ 
+    font-family: 'Helvetica';
+    font-size: 25px;
+    font-weight: bold;
+}
+.count-widget{ 
+	float: left; 
+	width: 100%;
+    background: transparent;
+	display:block;
+	margin-left: 90px;
+} 
+.box { 
+	width: 14%; 
+	height: 130px;
+	margin-left: 2%; 
+	float: left; 
+	border-radius:20px; 
+	text-align: center; 
+	display: table-cell; 
+	border-style: solid; 
+	border-width: thin; 
+}
+.map-widget {
+    border: solid 1px;
+	width:1100px;
+	height: 470px;
+	border-radius:10px;
+	border-color: #d1d7db;
+	overflow:hidden;
+	font-size: 0;
+	display:block;
+    margin:auto;
+} 
+.casesperday-widget {
+    border: solid 1px;
+	width:1100px;
+	height: 470px;
+	border-radius:10px;
+	border-color: #d1d7db;
+	overflow:hidden;
+	display:block;
+    margin:auto;
+}
+.pct-widget {
+	float: left; 
+	width: 100%;
+	margin-left: 50px;
+}
+.barchartage-widget {
+ 	width: 550px;
+	height: 160px;
+	position: relative;
+	top: -140px;
+	left: 90px;
+	background: transparent
+}
+.gender-box {
+	width: 35%; 
+	height: 170px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	float: left; 
+	border-radius:10px; 
+	border-style: solid; 
+	border-width: thin;
+	border-color:#d1d7db;
+}
+.age-box {
+	width: 56%; 
+	height: 170px;
+	float: left; 
+	border-radius:10px; 
+	border-style: solid; 
+	border-width: thin;
+	border-color:#d1d7db;
+}
+.crr-box {
+	width: 17%; 
+	height: 150px;
+	margin-right: 15px;
+	float: left; 
+	border-radius:10px; 
+	border-style: solid; 
+	border-width: thin;
+	border-color:#d1d7db;
+}
+.others-box {
+	width: 55%; 
+	height: 150px;
+	float: left; 
+	border-radius:10px; 
+	border-style: solid; 
+	border-width: thin;
+	border-color:#d1d7db;
+}
+.counter-header { 
+	font-family: 'Century Gothic'; 
+	font-size: 16px; 
+	font-weight: bold; 
+	padding-top: 10px;
+	white-space: nowrap;
+} 
+.counter-data { 
+	font-family: 'Century Gothic'; 
+	font-size: 65px; 
+	font-weight: bold; 
+	padding-top: 10px; 
+} 
+.confirmed { 
+	background: rgb(235, 87, 87); 
+	color: #fff; 
+	border-style: solid; 
+} 
+.deaths { 
+	background: rgb(255, 255, 255); 
+	color: rgb(149, 163, 174); 
+}     
+.critical { 
+	background: rgb(255, 255, 255); 
+	color: rgb(128, 0, 0); 
+} 
+.serious { 
+	background: rgb(255, 255, 255); 
+	color: rgb(206, 17, 38); 
+} 
+.recovered { 
+	background: rgb(255, 255, 255); 
+	color: rgb(39, 174, 96); 
+}
+.age {
+	width: 50%; 
+}
+.pct-header { 
+	font-family: 'Century Gothic'; 
+	font-size: 18px; 
+	font-weight: bold; 
+	padding-top: 10px;
+	padding-left: 10px;
+	white-space: nowrap;
+	text-align: left;
+} 
+.pct-data { 
+	font-family: 'Century Gothic'; 
+	font-size: 55px; 
+	font-weight: bold;
+	padding-top: 15px;
+	text-align: center;
+}
+.pct-data-age { 
+	font-family: 'Century Gothic'; 
+	font-size: 55px; 
+	font-weight: bold;
+	padding-top: 40px;
+	padding-left: 25px;
+	text-align: left;
+}
+.pct-data-rate { 
+	font-family: 'Century Gothic'; 
+	font-size: 65px; 
+	font-weight: bold;
+	padding-top: 45px;
+	padding-left: 50px;
+	text-align: center;
+	width: 10%;
+}
+.pct-data-others { 
+	font-family: 'Century Gothic'; 
+	font-size: 18px; 
+	font-weight: bold;
+	padding-top: 20px;
+	padding-left: 10px;
+	text-align: left;
+	width: 45%;
+	white-space: nowrap;
+	text-indent: 0.1em;
+}
+.pct-data-age-label { 
+	font-family: 'Century Gothic'; 
+	font-size: 14px; 
+	text-align: left;
+	font-weight: normal;
+	/*padding-left: -15px;*/
+	padding-top: 0px;
+	margin-top: 0px;
+}
+.pct-sign {
+	font-family: 'Helvetica'; 
+	font-size: 30px; 
+}
+.others-sign {
+	font-family: 'Helvetica'; 
+	font-size: 30px;
+	color: #2d9bdb;
+}
+.pct-person {
+	font-size: 95px;
+	color: #d1d7db;
+}
+.pct-gt {
+	font-size: 50px;
+	color: #eb5757;
+	font-weight: bold;
+}
+@media all and (max-width: 1140px)  { 
+	.count-widget{ 
+		font-size: 10px; 
+	} 
+} 
+@media all and (max-width: 700px)  { 
+	.count-widget{ 
+		font-size: 10px; 
+	} 
+} 
+@media all and (max-width: 550px) { 
+    .title-text{
+        font-size: 8px;
+    }
+    .updated-text{
+        padding-left: 0;	
+        font-size: 4px;
+    }
+    .date-text{
+        font-size: 8px;
+    }
+	.count-widget{ 
+		font-size: 10px; 
+	} 
+	.box { 
+		width: 32%; 
+		height: 30px;
+		margin-left: 1%; 
+		border-radius:10px; 
+	} 
+	.counter-header { 
+		font-size:4px; 
+		padding-top:3px; 
+	} 
+	.counter-data { 
+		font-size:14px; 
+		padding-top:0px; 
+	} 
+	.deaths { 
+		width: 15%; 
+	} 
+	.critical { 
+		width: 15%; 
+	} 
+	.serious { 
+		width: 15%; 
+	} 
+	.recovered { 
+		width: 15%; 
+	} 
+} 
+</style>
+</head>
+<body>
+<div class="content">
+	<div class="container">
+		<div class="title-area">
+			<div class='updated-text'>&nbsp;</div>
+			<div class="title-text">PHILIPPINES COVID-19 DATA</div>
+		</div>
+		<div class="date-area">
+			<div class='updated-text'>UPDATED AS OF</div>
+			<div class='date-text'><span id="lastupdatedt"></span></div>
+		</div>
+	</div>
+	<div class="container">
+        <div class='count-widget'> 
+            <div class='box confirmed'> 
+                <div class='counter-header'>CONFIRMED CASES</div> 
+                <div class='counter-data'><span id="confirmed"/></div>
+	        </div>
+            <div class='box deaths'> 
+                <div class='counter-header'>DEATHS</div> 
+                <div class='counter-data'><span id="deaths"/></div>
+	        </div>
+            <div class='box critical'> 
+                <div class='counter-header'>CRITICAL</div> 
+                <div class='counter-data'><span id="critical"/></div>
+	        </div>
+            <div class='box serious'> 
+                <div class='counter-header'>SERIOUS</div> 
+                <div class='counter-data'><span id="serious"/></div>
+	        </div>
+            <div class='box recovered'> 
+                <div class='counter-header'>RECOVERED</div> 
+                <div class='counter-data'><span id="recovered"/></div>
+	        </div>
+	    </div>
+	</div>
+	<div class="container">
+        <div class="map-widget">
+	        <iframe src="https://iamramengirl.github.io./heatmap.html" style="margin:0; padding:0; left:-10px; top:-10px; position:relative; border:none; width:1300px; height: 600px; background-color: transparent;" scrolling="no"></iframe>
+		</div>
+	</div>
+	<div class="container">
+	    <div class="casesperday-widget">
+		　　　<!--img style="max-width:100%; max-height:100%;" src="https://iamramengirl.github.io./casesperday.png"/-->
+	        <iframe src="https://iamramengirl.github.io./graphcarousel.html" style="border:none; width:100%; height: 100%; -moz-transform-origin:0 0;" scrolling="no"></iframe>
+		</div>
+	</div>
+	<div class="container">
+        <div class="pct-widget">
+			<div class="gender-box">
+				<div class='pct-header'>BY GENDER</div>
+				<div class='pct-data'>
+				  <span id="pctmale"></span><span class='pct-sign'>%</span>
+				  <span class='pct-person'><i class='fa fa-male'></i></span>
+				  <span class='pct-gt'><i class='material-icons'>></i></span></span>
+				  <span class='pct-person'><i class='fa fa-female'></i></span>
+				  <span id="pctfemale"></span><span class='pct-sign'>%</span>
+				</div>
+			</div>
+			<div class="age-box">
+				<div class='pct-header'>BY AGE</div>
+				<div class='pct-data-age'>
+				  <span style="margin-right:0.2em;"></span><span id="youngest"></span>-<span id="youngest"></span><span id="oldest"></span>
+				  <div class='pct-data-age-label'>Youngest<span style="margin-right:1.2em;"></span>Oldest</div>
+				</div>
+				<div class="barchartage-widget">
+		　　　        <img style="max-width:90%; max-height:90%;" src="https://iamramengirl.github.io./barchartage.png"/>
+				</div>
+			</div>
+	    </div>
+	</div>
+	<div class="container">
+        <div class="pct-widget">
+			<div class="crr-box">
+				<div class='pct-header'>CASE FATALITY RATE</div>
+				<div class='pct-data'>
+				  <span id="cfr"></span><span class='pct-sign'>%</span>
+				</div>
+			</div>
+			<div class="crr-box">
+				<div class='pct-header'>CASE RECOVERY RATE</div>
+				<div class='pct-data'>
+				  <span id="crr"></span><span class='pct-sign'>%</span>
+				</div>
+			</div>
+			<div class="others-box">
+				<div class='pct-header'>OTHERS</div>
+				<div class='pct-data-others'>
+				  <span style="margin-right:0.5em;"></span><span class='others-sign'><i class='fa fa-plane'></i></span><span style="margin-right:0.9em;"></span>TRAVEL RELATED CASES<span style="margin-right:0.7em;"></span>-<span style="margin-right:0.2em;"></span><span id="travel_related"></span>
+				</div>
+				<div class='pct-data-others'>
+				  <span style="margin-right:0.5em;"></span><span class='others-sign'><i class='fa fa-users'></i></span><span style="margin-right:0.5em;"></span>CLOSE CONTACT CASES<span style="margin-right:0.2em;"></span>-<span style="margin-right:0.2em;"></span><span id="close_contact"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+    // Date
+    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    function zeroPadding(number, length) {
+        return (Array(length).join('0') + number).slice(-length);
+    }
+    var d = new Date();
+	var lastUpdateDate = days[d.getDay()] + ", " + months[d.getMonth()] + " " + d.getDate() + " " + zeroPadding(d.getHours(),2) + ":" + zeroPadding(d.getMinutes(),2);
+    document.getElementById("lastupdatedt").innerHTML = lastUpdateDate;
+
+    // Stats
+    var statsjson = '{"confirmed":1546, "deaths":78, "critical":4, "serious":9, "recovered":42 }';
+    var statsobj = JSON.parse(statsjson);
+    document.getElementById("confirmed").innerHTML = statsobj.confirmed;
+    document.getElementById("deaths").innerHTML    = statsobj.deaths;
+    document.getElementById("critical").innerHTML  = statsobj.critical;
+    document.getElementById("serious").innerHTML   = statsobj.serious;
+    document.getElementById("recovered").innerHTML = statsobj.recovered;
+
+	// pct
+	var pctjson = '{"pctmale":63, "pctfemale":37, "youngest":1, "oldest":98, "cfr":5.05, "crr":2.72, "travel_related":47, "close_contact":53 }';
+    var pctobj = JSON.parse(pctjson);
+    document.getElementById("pctmale").innerHTML = pctobj.pctmale;
+    document.getElementById("pctfemale").innerHTML = pctobj.pctfemale;
+    document.getElementById("youngest").innerHTML = pctobj.youngest;
+    document.getElementById("oldest").innerHTML = pctobj.oldest;
+    document.getElementById("cfr").innerHTML = pctobj.cfr;
+    document.getElementById("crr").innerHTML = pctobj.crr;
+    document.getElementById("travel_related").innerHTML = pctobj.travel_related;
+    document.getElementById("close_contact").innerHTML = pctobj.close_contact;
+</script>
+<script src="https://unpkg.com/nbinteract-core" async></script>
+</body>
+</html>
