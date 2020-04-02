@@ -342,7 +342,8 @@ body {
 	<div class="container">
 	    <div class="casesperday-widget">
 		　　　<!--img style="max-width:100%; max-height:100%;" src="https://iamramengirl.github.io./casesperday.png"/-->
-	        <iframe src="https://iamramengirl.github.io./graphcarousel.html" style="border:none; width:100%; height: 100%; -moz-transform-origin:0 0;" scrolling="no"></iframe>
+	        <!--iframe src="https://iamramengirl.github.io./graphcarousel.html" style="border:none; width:100%; height: 100%; -moz-transform-origin:0 0;" scrolling="no"></iframe-->
+            <iframe src="https://iamramengirl.github.io./casesperday.html" style="border:none; width:1600px; height: 850px; top: -800px; -moz-transform-origin:0 0; -moz-transform:scale(0.70);" scrolling="no"></iframe>
 		</div>
 	</div>
 	<div class="container">
@@ -372,18 +373,18 @@ body {
 	<div class="container">
         <div class="pct-widget">
 			<div class="crr-box">
-				<div class='pct-header'>CASE FATALITY RATE</div>
+				<div class='pct-header'>FATALITY RATE</div>
 				<div class='pct-data'>
 				  <span id="cfr"></span><span class='pct-sign'>%</span>
 				</div>
 			</div>
 			<div class="crr-box">
-				<div class='pct-header'>CASE RECOVERY RATE</div>
+				<div class='pct-header'>RECOVERY RATE</div>
 				<div class='pct-data'>
 				  <span id="crr"></span><span class='pct-sign'>%</span>
 				</div>
 			</div>
-			<div class="others-box">
+			<!--div class="others-box">
 				<div class='pct-header'>OTHERS</div>
 				<div class='pct-data-others'>
 				  <span style="margin-right:0.5em;"></span><span class='others-sign'><i class='fa fa-plane'></i></span><span style="margin-right:0.9em;"></span>TRAVEL RELATED CASES<span style="margin-right:0.7em;"></span>-<span style="margin-right:0.2em;"></span><span id="travel_related"></span>
@@ -391,7 +392,7 @@ body {
 				<div class='pct-data-others'>
 				  <span style="margin-right:0.5em;"></span><span class='others-sign'><i class='fa fa-users'></i></span><span style="margin-right:0.5em;"></span>CLOSE CONTACT CASES<span style="margin-right:0.2em;"></span>-<span style="margin-right:0.2em;"></span><span id="close_contact"></span>
 				</div>
-			</div>
+			</div-->
 		</div>
 	</div>
 </div>
@@ -407,7 +408,7 @@ body {
     document.getElementById("lastupdatedt").innerHTML = lastUpdateDate;
 
     // Stats
-    var statsjson = '{"confirmed":2000, "deaths":78, "critical":4, "serious":9, "recovered":42 }';
+    var statsjson = '{"confirmed":2633, "deaths":96, "critical":4, "serious":9, "recovered":50 }';
     var statsobj = JSON.parse(statsjson);
     document.getElementById("confirmed").innerHTML = statsobj.confirmed;
     document.getElementById("deaths").innerHTML    = statsobj.deaths;
@@ -416,7 +417,7 @@ body {
     document.getElementById("recovered").innerHTML = statsobj.recovered;
 
 	// pct
-	var pctjson = '{"pctmale":62, "pctfemale":38, "youngest":1, "oldest":98, "cfr":3.9, "crr":2.1, "travel_related":42, "close_contact":51 }';
+	var pctjson = '{"pctmale":61, "pctfemale":39, "youngest":0, "oldest":98, "cfr":3.65, "crr":1.9, "travel_related":42, "close_contact":51 }';
     var pctobj = JSON.parse(pctjson);
     document.getElementById("pctmale").innerHTML = pctobj.pctmale;
     document.getElementById("pctfemale").innerHTML = pctobj.pctfemale;
