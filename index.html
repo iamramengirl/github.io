@@ -14,7 +14,7 @@ body {
     background: #555;
 }
 .content {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     background: white;
 }
@@ -52,59 +52,61 @@ body {
 }
 .count-widget{ 
 	float: left; 
-	width: 100%;
+	width: 22%;
     background: transparent;
-	display:block;
-	margin-left: 90px;
+	margin-left: 8%;
 } 
 .box { 
-	width: 14%; 
-	height: 130px;
-	margin-left: 2%; 
+	width: 25%; 
+	height: 75px;
+	margin-left: 6%; 
 	float: left; 
 	border-radius:20px; 
 	text-align: center; 
 	display: table-cell; 
 	border-style: solid; 
-	border-width: thin; 
+	border-width: thin;
+    text-align: center;	
 }
 .map-widget {
     border: solid 1px;
-	width:1100px;
-	height: 470px;
-	border-radius:10px;
+	width: 340px;
+	height: 380px;
+	border-radius:8px;
 	border-color: #d1d7db;
 	overflow:hidden;
 	font-size: 0;
-	display:block;
-    margin:auto;
+	margin-left: 8%;
+	margin-top: 100px;
 } 
 .casesperday-widget {
     border: solid 1px;
-	width:1100px;
-	height: 470px;
+	width: 48.5%;
+	height: 485px;
 	border-radius:10px;
 	border-color: #d1d7db;
 	overflow:hidden;
-	display:block;
-    margin:auto;
+	float: left;
+	position: absolute;
+	top: 100px;
+	left: 650px;
 }
 .pct-widget {
 	float: left; 
 	width: 100%;
-	margin-left: 50px;
+	margin-left: 125px;
 }
 .barchartage-widget {
- 	width: 550px;
+ 	width: 520px;
 	height: 160px;
 	position: relative;
-	top: -140px;
-	left: 90px;
+	top: -120px;
+	left: 73px;
 	background: transparent
 }
 .gender-box {
-	width: 35%; 
-	height: 178px;
+	width: 22%; 
+	height: 175px;
 	margin-bottom: 10px;
 	margin-right: 10px;
 	float: left; 
@@ -114,8 +116,8 @@ body {
 	border-color:#d1d7db;
 }
 .age-box {
-	width: 56%; 
-	height: 178px;
+	width: 37%; 
+	height: 175px;
 	float: left; 
 	border-radius:10px; 
 	border-style: solid; 
@@ -123,14 +125,15 @@ body {
 	border-color:#d1d7db;
 }
 .crr-box {
-	width: 18%; 
-	height: 150px;
+	width: 10%; 
+	height: 175px;
 	margin-right: 15px;
 	float: left; 
 	border-radius:10px; 
 	border-style: solid; 
 	border-width: thin;
 	border-color:#d1d7db;
+	font-size: 0;
 }
 .others-box {
 	width: 54%; 
@@ -143,16 +146,17 @@ body {
 }
 .counter-header { 
 	font-family: 'Century Gothic'; 
-	font-size: 16px; 
+	font-size: 10px; 
 	font-weight: bold; 
-	padding-top: 10px;
+	padding-top: 3px;
 	white-space: nowrap;
 } 
 .counter-data { 
 	font-family: 'Century Gothic'; 
-	font-size: 65px; 
+	font-size: 30px; 
 	font-weight: bold; 
-	padding-top: 10px; 
+	padding-top: 2px; 
+	padding-top: 2px; 
 } 
 .confirmed { 
 	background: rgb(235, 87, 87); 
@@ -163,21 +167,13 @@ body {
 	background: rgb(255, 255, 255); 
 	color: rgb(149, 163, 174); 
 }     
-.critical { 
-	background: rgb(255, 255, 255); 
-	color: rgb(128, 0, 0); 
-} 
-.serious { 
-	background: rgb(255, 255, 255); 
-	color: rgb(206, 17, 38); 
-} 
 .recovered { 
 	background: rgb(255, 255, 255); 
 	color: rgb(39, 174, 96); 
 }
 .pct-header { 
 	font-family: 'Century Gothic'; 
-	font-size: 18px; 
+	font-size: 13px; 
 	font-weight: bold; 
 	padding-top: 10px;
 	padding-left: 10px;
@@ -186,14 +182,14 @@ body {
 } 
 .pct-data { 
 	font-family: 'Century Gothic'; 
-	font-size: 55px; 
+	font-size: 40px; 
 	font-weight: bold;
-	padding-top: 15px;
+	padding-top: 25px;
 	text-align: center;
 }
 .pct-data-age { 
 	font-family: 'Century Gothic'; 
-	font-size: 55px; 
+	font-size: 40px; 
 	font-weight: bold;
 	padding-top: 33px;
 	padding-left: 25px;
@@ -287,12 +283,6 @@ body {
 	.deaths { 
 		width: 15%; 
 	} 
-	.critical { 
-		width: 15%; 
-	} 
-	.serious { 
-		width: 15%; 
-	} 
 	.recovered { 
 		width: 15%; 
 	} 
@@ -314,60 +304,24 @@ body {
 	<div class="container">
         <div class='count-widget'> 
             <div class='box confirmed'> 
-                <div class='counter-header'>CONFIRMED CASES</div> 
+                <div class='counter-header'>CONFIRMED</div> 
                 <div class='counter-data'><span id="confirmed"/></div>
 	        </div>
             <div class='box deaths'> 
                 <div class='counter-header'>DEATHS</div> 
                 <div class='counter-data'><span id="deaths"/></div>
 	        </div>
-            <div class='box critical'> 
-                <div class='counter-header'>CRITICAL</div> 
-                <div class='counter-data'><span id="critical"/></div>
-	        </div>
-            <div class='box serious'> 
-                <div class='counter-header'>SERIOUS</div> 
-                <div class='counter-data'><span id="serious"/></div>
-	        </div>
             <div class='box recovered'> 
                 <div class='counter-header'>RECOVERED</div> 
                 <div class='counter-data'><span id="recovered"/></div>
 	        </div>
 	    </div>
-	</div>
-	<div class="container">
-        <div class="map-widget">
-	        <iframe src="https://iamramengirl.github.io./heatmap.html" style="margin:0; padding:0; left:-10px; top:-10px; position:relative; border:none; width:1300px; height: 600px; background-color: transparent;" scrolling="no"></iframe>
+		<div class="map-widget">
+			<iframe src="https://iamramengirl.github.io./heatmap.html" style="margin:0; padding:0; left:-10px; top:-10px; position:relative; width:1300px; height: 600px; background-color: transparent;" scrolling="no"></iframe>
 		</div>
-	</div>
-	<div class="container">
 	    <div class="casesperday-widget">
-            <iframe src="https://iamramengirl.github.io./casesperday.html" style="border:none; width:1580px; height: 700px; top: -800px; -webkit-transform-origin:0 0; -webkit-transform:scale(0.70); -moz-transform-origin:0 0; -moz-transform:scale(0.70);" scrolling="no"></iframe>
+            <iframe src="https://iamramengirl.github.io./casesperday.html" style="border:none; width:1350px; height: 720px; top: -800px; transform-origin:0 0; transform:scale(0.70); -ms-transform-origin:0 0; -ms-transform:scale(0.70); -webkit-transform-origin:0 0; -webkit-transform:scale(0.70); -moz-transform-origin:0 0; -moz-transform:scale(0.70);" scrolling="no"></iframe>
 		</div>
-	</div>
-	<div class="container">
-        <div class="pct-widget">
-			<div class="gender-box">
-				<div class='pct-header'>BY GENDER</div>
-				<div class='pct-data'>
-				  <span id="pctmale"></span><span class='pct-sign'>%</span>
-				  <span class='pct-person'><img style="max-width:90%; max-height:90%;" src="https://iamramengirl.github.io./male.png"/></span>
-				  <span class='pct-gt'><i class='material-icons'>></i></span></span>
-				  <span class='pct-person'><img style="max-width:90%; max-height:90%;" src="https://iamramengirl.github.io./female.png"/></span>
-				  <span id="pctfemale"></span><span class='pct-sign'>%</span>
-				</div>
-			</div>
-			<div class="age-box">
-				<div class='pct-header'>BY AGE</div>
-				<div class='pct-data-age'>
-				  <span style="margin-right:0.2em;"></span><span id="youngest"></span>-<span id="youngest"></span><span id="oldest"></span>
-				  <div class='pct-data-age-label'>Youngest<span style="margin-right:1.2em;"></span>Oldest</div>
-				</div>
-				<div class="barchartage-widget">
-		　　　        <img style="max-width:90%; max-height:90%;" src="https://iamramengirl.github.io./barchartage.png"/>
-				</div>
-			</div>
-	    </div>
 	</div>
 	<div class="container">
         <div class="pct-widget">
@@ -383,16 +337,27 @@ body {
 				  <span id="crr"></span><span class='pct-sign'>%</span>
 				</div>
 			</div>
-			<!--div class="others-box">
-				<div class='pct-header'>OTHERS</div>
-				<div class='pct-data-others'>
-				  <span style="margin-right:0.5em;"></span><span class='others-sign'><i class='fa fa-plane'></i></span><span style="margin-right:0.9em;"></span>TRAVEL RELATED CASES<span style="margin-right:0.7em;"></span>-<span style="margin-right:0.2em;"></span><span id="travel_related"></span>
+			<div class="gender-box">
+				<div class='pct-header'>BY GENDER</div>
+				<div class='pct-data'>
+				  <span id="pctmale"></span><span class='pct-sign'>%</span>
+				  <span class='pct-person'><img style="max-width:90%; max-height:90%;" src="https://iamramengirl.github.io./male.png"/></span>
+				  <span class='pct-gt'><i class='material-icons'>></i></span></span>
+				  <span class='pct-person'><img style="max-width:90%; max-height:90%;" src="https://iamramengirl.github.io./female.png"/></span>
+				  <span id="pctfemale"></span><span class='pct-sign'>%</span>
 				</div>
-				<div class='pct-data-others'>
-				  <span style="margin-right:0.5em;"></span><span class='others-sign'><i class='fa fa-users'></i></span><span style="margin-right:0.5em;"></span>CLOSE CONTACT CASES<span style="margin-right:0.2em;"></span>-<span style="margin-right:0.2em;"></span><span id="close_contact"></span>
+			</div>
+			<div class="age-box">
+				<div class='pct-header'>BY AGE</div>
+				<div class='pct-data-age'>
+				  <span style="margin-right:0.3em;"></span><span id="youngest"></span><span style="margin-right:0.3em;"></span>-<span style="margin-right:0.3em;"></span><span id="youngest"></span><span id="oldest"></span>
+				  <div class='pct-data-age-label'>Youngest<span style="margin-right:1.0em;"></span>Oldest</div>
 				</div>
-			</div-->
-		</div>
+				<div class="barchartage-widget">
+		　　　        <img style="max-width:80%; max-height:80%;" src="https://iamramengirl.github.io./barchartage.png"/>
+				</div>
+			</div>
+	    </div>
 	</div>
 </div>
 <script>
@@ -407,16 +372,14 @@ body {
     document.getElementById("lastupdatedt").innerHTML = lastUpdateDate;
 
     // Stats
-    var statsjson = '{"confirmed":3094, "deaths":144, "critical":4, "serious":9, "recovered":57 }';
+    var statsjson = '{"confirmed":3194, "deaths":144, "recovered":57 }';
     var statsobj = JSON.parse(statsjson);
     document.getElementById("confirmed").innerHTML = statsobj.confirmed;
     document.getElementById("deaths").innerHTML    = statsobj.deaths;
-    document.getElementById("critical").innerHTML  = statsobj.critical;
-    document.getElementById("serious").innerHTML   = statsobj.serious;
     document.getElementById("recovered").innerHTML = statsobj.recovered;
 
 	// pct
-	var pctjson = '{"pctmale":60, "pctfemale":40, "youngest":0, "oldest":98, "cfr":4.65, "crr":1.84, "travel_related":42, "close_contact":51 }';
+	var pctjson = '{"pctmale":59, "pctfemale":41, "youngest":0, "oldest":98, "cfr":3.21, "crr":1.66, "travel_related":42, "close_contact":51 }';
     var pctobj = JSON.parse(pctjson);
     document.getElementById("pctmale").innerHTML = pctobj.pctmale;
     document.getElementById("pctfemale").innerHTML = pctobj.pctfemale;
@@ -427,6 +390,5 @@ body {
     document.getElementById("travel_related").innerHTML = pctobj.travel_related;
     document.getElementById("close_contact").innerHTML = pctobj.close_contact;
 </script>
-<script src="https://unpkg.com/nbinteract-core" async></script>
 </body>
 </html>
