@@ -372,14 +372,14 @@ body {
     document.getElementById("lastupdatedt").innerHTML = lastUpdateDate;
 
     // Stats
-    var statsjson = '{"confirmed":3194, "deaths":144, "recovered":57 }';
+    var statsjson = '{"confirmed":3246, "deaths":152, "recovered":64 }';
     var statsobj = JSON.parse(statsjson);
     document.getElementById("confirmed").innerHTML = statsobj.confirmed;
     document.getElementById("deaths").innerHTML    = statsobj.deaths;
     document.getElementById("recovered").innerHTML = statsobj.recovered;
 
 	// pct
-	var pctjson = '{"pctmale":59, "pctfemale":41, "youngest":0, "oldest":98, "cfr":4.65, "crr":1.84, "travel_related":42, "close_contact":51 }';
+	var pctjson = '{"pctmale":59, "pctfemale":41, "youngest":0, "oldest":98, "cfr":4.68, "crr":1.97, "travel_related":42, "close_contact":51 }';
     var pctobj = JSON.parse(pctjson);
     document.getElementById("pctmale").innerHTML = pctobj.pctmale;
     document.getElementById("pctfemale").innerHTML = pctobj.pctfemale;
