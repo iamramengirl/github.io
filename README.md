@@ -1,1 +1,1 @@
-Data Sources: JHU, DOH
+Data Sources: JHU, Worldometers, DOH
