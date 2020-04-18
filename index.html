@@ -26,7 +26,7 @@
 				margin-left: 30%
 			}
 			.box { 
-				width: 170px; 
+				width: 200px; 
 				height: 150px;
 				border-radius:15px; 
 				border-style: solid; 
@@ -51,6 +51,10 @@
 				background: rgb(255, 255, 255); 
 				color: rgb(66, 132, 247); 
 			}
+			.tests { 
+				background: rgb(255, 255, 255); 
+				color: rgb(240, 191, 43);
+			}
 			.counter-header { 
 				font-family: 'Century Gothic'; 
 				font-size: 18px; 
@@ -60,13 +64,13 @@
 			} 
 			.counter-data { 
 				font-family: 'Century Gothic'; 
-				font-size: 70px; 
+				font-size: 55px; 
 				font-weight: bold; 
 				padding-top: 7px;
 			}
 			.counter-sub-data { 
 				font-family: 'Century Gothic'; 
-				font-size: 15px; 
+				font-size: 14px; 
 				font-weight: bold; 
 			}
 			.map-widget {
@@ -179,15 +183,20 @@
 		</div>
 		<!-- Grid 1/2 -->
 		<div class="grid grid-pad">
-			<div class="col-1-4 mobile-col-1-1">
+			<div class="col-1-5 mobile-col-1-1">
 				<div class="content">
 					<div class='box confirmed'> 
 						<div class='counter-header'>CONFIRMED CASES</div> 
-						<div class='counter-data'><span id="confirmed"/></div>
+						<div class='counter-data'>
+						    <span id="confirmed"/></span>
+							<div class='counter-sub-data'>
+								(<span id="pop"></span>% of POPULATION)
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-1-4 mobile-col-1-1">
+			<div class="col-1-5 mobile-col-1-1">
 				<div class="content">
 					<div class='box deaths'> 
 						<div class='counter-header'>DEATHS</div> 
@@ -200,7 +209,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-1-4 mobile-col-1-1">
+			<div class="col-1-5 mobile-col-1-1">
 				<div class="content">
 					<div class='box recovered'> 
 						<div class='counter-header'>RECOVERIES</div> 
@@ -213,11 +222,19 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-1-4 mobile-col-1-1">
+			<div class="col-1-5 mobile-col-1-1">
 				<div class="content">
 					<div class='box active'> 
 						<div class='counter-header'>ACTIVE CASES</div> 
 						<div class='counter-data'><span id="active"/></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-1-5 mobile-col-1-1">
+				<div class="content">
+					<div class='box tests'> 
+						<div class='counter-header'>TOTAL TESTS</div> 
+						<div class='counter-data'><span id="tests"/></div>
 					</div>
 				</div>
 			</div>
@@ -327,12 +344,14 @@
 			// Date
 			document.getElementById("lastupdatedt").innerHTML = "(Sat) April 18, 2020";
 			// Stats
-			var statsjson = '{"confirmed":6087, "deaths":397, "recovered":516, "active": 5174, "cfr":"6.52", "crr":8.48, "pctfemale":46, "pctmale":54, "youngest":0, "oldest":101}';
+			var statsjson = '{"confirmed":"6,087", "deaths":397, "recovered":516, "active":"5,174", "tests": "56,048",  "pop":"0.005", "cfr":"6.52", "crr":8.48, "pctfemale":46, "pctmale":54, "youngest":0, "oldest":101}';
 			var statsobj = JSON.parse(statsjson);
 			document.getElementById("confirmed").innerHTML = statsobj.confirmed;
+			document.getElementById("pop").innerHTML = statsobj.pop;
 			document.getElementById("deaths").innerHTML    = statsobj.deaths;
 			document.getElementById("recovered").innerHTML = statsobj.recovered;
 			document.getElementById("active").innerHTML = statsobj.active;
+			document.getElementById("tests").innerHTML = statsobj.tests;
 			document.getElementById("cfr").innerHTML = statsobj.cfr;
 			document.getElementById("crr").innerHTML = statsobj.crr;
 			document.getElementById("pctfemale").innerHTML = statsobj.pctfemale;
