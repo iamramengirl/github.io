@@ -30,8 +30,8 @@
 				margin-left: 30%
 			}
 			.box { 
-				width: 200px; 
-				height: 140px;
+				width: 160px; 
+				height: 130px;
 				border-radius:15px; 
 				border-style: solid; 
 				border-width: thin;
@@ -61,20 +61,20 @@
 			}
 			.counter-header { 
 				font-family: 'Century Gothic'; 
-				font-size: 18px; 
+				font-size: 16px; 
 				font-weight: bold; 
 				padding-top: 7px;
 				white-space: nowrap;
 			} 
 			.counter-data { 
 				font-family: 'Century Gothic'; 
-				font-size: 55px; 
+				font-size: 40px; 
 				font-weight: bold; 
 				padding-top: 7px;
 			}
 			.counter-sub-data { 
 				font-family: 'Century Gothic'; 
-				font-size: 14px; 
+				font-size: 12px; 
 				font-weight: bold; 
 			}
 			.map-widget {
@@ -328,9 +328,9 @@
 
 		<script>
 			// Date
-			document.getElementById("lastupdatedt").innerHTML = "(Mon) April 27, 2020";
+			document.getElementById("lastupdatedt").innerHTML = "(Wed) April 29, 2020";
 			// Stats
-			var statsjson = '{"confirmed":"7,777", "deaths":511, "recovered":932, "active":"6,334", "tests": "89,889",  "pop":"0.007", "cfr":"6.57", "crr":"11.98", "pctfemale":45, "pctmale":55, "youngest":0, "oldest":101}';
+			var statsjson = '{"confirmed":"8,212", "deaths":"558", "recovered":"1,023", "active":"6,631", "tests": "98,941",  "pop":"0.008", "cfr":"6.79", "crr":"12.46", "pctfemale":45, "pctmale":55, "youngest":0, "oldest":101}';
 			var statsobj = JSON.parse(statsjson);
 			document.getElementById("confirmed").innerHTML = statsobj.confirmed;
 			document.getElementById("pop").innerHTML = statsobj.pop;
