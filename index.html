@@ -212,12 +212,12 @@
 			</div>
 			<div class="col-1-5 mobile-col-1-1">
 				<div class="content">
-					<div class='box deaths'> 
-						<div class='counter-header'>DEATHS</div> 
+					<div class='box recovered'> 
+						<div class='counter-header'>RECOVERIES</div> 
 						<div class='counter-data'>
-						    <span id="deaths"></span>
+						    <span id="recovered"></span>
 							<div class='counter-sub-data'>
-								(CFR: <span id="cfr"></span>%)
+								(CRR: <span id="crr"></span>%)
 							</div>
 						</div>
 					</div>
@@ -225,12 +225,12 @@
 			</div>
 			<div class="col-1-5 mobile-col-1-1">
 				<div class="content">
-					<div class='box recovered'> 
-						<div class='counter-header'>RECOVERIES</div> 
+					<div class='box deaths'> 
+						<div class='counter-header'>DEATHS</div> 
 						<div class='counter-data'>
-						    <span id="recovered"></span>
+						    <span id="deaths"></span>
 							<div class='counter-sub-data'>
-								(CRR: <span id="crr"></span>%)
+								(CFR: <span id="cfr"></span>%)
 							</div>
 						</div>
 					</div>
@@ -330,7 +330,7 @@
 			// Date
 			document.getElementById("lastupdatedt").innerHTML = "(Tue) May 5, 2020";
 			// Stats
-			var statsjson = '{"confirmed":"9,684", "deaths":"637", "recovered":"1,408", "active":"7,639", "tests": "130,889",  "pop":"0.009", "cfr":"6.58", "crr":"14.54", "pctfemale":45, "pctmale":55, "youngest":0, "oldest":102}';
+			var statsjson = '{"confirmed":"9,684", "recovered":"1,408", "deaths":"637", "active":"7,639", "tests": "132,689",  "pop":"0.009", "cfr":"6.58", "crr":"14.54", "pctfemale":45, "pctmale":55, "youngest":0, "oldest":102}';
 			var statsobj = JSON.parse(statsjson);
 			document.getElementById("confirmed").innerHTML = statsobj.confirmed;
 			document.getElementById("pop").innerHTML = statsobj.pop;
