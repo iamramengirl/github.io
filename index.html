@@ -7,8 +7,40 @@
 		<style>
 		    @font-face {
                 font-family: "MuseoSans";
-                src: url("file:///C:/iamramengirl/forupload/font/MuseoSans_100.otf") format("opentype"),;
+                src: url("https://iamramengirl.github.io./font/MuseoSans_100.otf") format("opentype"),;
             }
+			
+			* { margin: 0; padding: 0; }
+			#page-wrap { width: 960px; margin: 100px auto; }
+			h1 { font: 36px Georgia, Serif; margin: 20px 0; }
+			.group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+			p { margin: 0 0 10px 0; }
+
+			.tabs { list-style: none; }
+			.tabs li { display: inline; }
+			.tabs li a { color: black; float: left; display: block; padding: 4px 10px; margin-left: -1px; position: relative; left: 1px; background: white; text-decoration: none; }
+			.tabs li a:hover { background: #ccc; }
+
+			/* Generic styles & example one */
+			.tabbed-area { margin: 0 0 120px 0; }
+			.box-wrap { position: relative; min-height: 250px; }
+			.tabbed-area div div { background: white; padding: 20px; min-height: 250px; position: absolute; top: -1px; left: 0; width: 100%; }
+			.tabbed-area div div, .tabs li a { border: 1px solid #ccc; }
+			#box-one:target, #box-two:target, #box-three:target { z-index: 1; }
+
+			/* Stuff for example two */
+			.cur-nav-fix { margin-top: 60px; }
+			.cur-nav-fix .tabs { position: absolute; bottom: 100%; left: -1px; }
+			.cur-nav-fix .tabs li a { background: -moz-linear-gradient(top, white, #eee); }
+			#box-linear { z-index: 1; }
+			#box-linear:target .tabs,
+			#box-newcases:target .tabs,
+			#box-confirmed-sma:target .tabs,
+			#box-recoveries-sma:target .tabs,
+			#box-deaths-sma:target .tabs { z-index: 5; }
+			#box-linear:target, #box-newcases:target, #box-confirmed-sma:target,  #box-recoveries-sma:target, #box-deaths-sma:target { z-index: 5; }
+			.cur-nav-fix .tabs li.cur a { border-bottom: 1px solid white; background: white; }
+			
 			.content {
 				background: #fff;
 				padding: 10px;
@@ -30,8 +62,8 @@
 				margin-left: 30%
 			}
 			.box { 
-				width: 160px; 
-				height: 130px;
+				width: 150px; 
+				height: 110px;
 				border-radius:15px; 
 				border-style: solid; 
 				border-width: thin;
@@ -61,33 +93,43 @@
 			}
 			.counter-header { 
 				font-family: 'Century Gothic'; 
-				font-size: 16px; 
+				font-size: 14px; 
 				font-weight: bold; 
-				padding-top: 7px;
+				padding-top: 5px;
 				white-space: nowrap;
 			} 
 			.counter-data { 
 				font-family: 'Century Gothic'; 
-				font-size: 40px; 
+				font-size: 35px; 
 				font-weight: bold; 
-				padding-top: 7px;
+				padding-top: 5px;
 			}
 			.counter-sub-data { 
 				font-family: 'Century Gothic'; 
-				font-size: 12px; 
+				font-size: 11px; 
 				font-weight: bold; 
 			}
 			.map-widget {
 				border: solid 1px;
-				width: 1000px;
-				height: 500px;
+				width: 900px;
+				height: 460px;
+				border-radius:8px;
+				border-color: #d1d7db;
+				overflow:hidden;
+				font-size: 0;
+				margin-left:8%;
+			}
+			.casesperday-widget {
+				border: solid 1px;
+				width: 1050px;
+				height: 600px;
 				border-radius:8px;
 				border-color: #d1d7db;
 				overflow:hidden;
 				font-size: 0;
 				margin-left:4%;
 			}
-			.casesperday-widget {
+			.percountrytrajectory-widget {
 				border: solid 1px;
 				width: 1000px;
 				height: 500px;
@@ -176,7 +218,6 @@
 				text-align: center;
 			}
 		</style>
-
 	</head>
 
 	<body>
@@ -258,7 +299,7 @@
 			<div class="col-1-1 mobile-col-1-1 push-1-1">
 				<div class="content">
 					<div class="map-widget">
-						<iframe src="https://iamramengirl.github.io./heatmap.html" style="margin:0; padding:0; left:-10px; top:-10px; position:relative; width:1005px; height: 520px; background-color: transparent;" scrolling="no"></iframe>
+						<iframe src="https://iamramengirl.github.io./heatmap.html" style="margin:0; padding:0; left:-10px; top:-10px; position:relative; width:960px; height: 470px; background-color: transparent;" scrolling="no"></iframe>
 					</div>
 				</div>
 			</div>
@@ -267,8 +308,61 @@
 		<div class="grid grid-pad">
 			<div class="col-1-1 mobile-col-1-1 push-1-1">
 				<div class="content">
-					<div class="casesperday-widget">
-						<iframe src="https://iamramengirl.github.io./casesperday.html" style="margin:0; padding:0; left:-10px; top:-10px; position:relative; width:1200px; height: 700px; top: -10px; transform-origin:0 0; transform:scale(0.90); -ms-transform-origin:0 0; -ms-transform:scale(0.90); -webkit-transform-origin:0 0; -webkit-transform:scale(0.90); -moz-transform-origin:0 0; -moz-transform:scale(0.90);" scrolling="no"></iframe>
+					<div style="width: 980px; height: 600px; float: left; margin-left:3%;">
+						<div class="tabbed-area cur-nav-fix">
+							<div class="box-wrap">
+								<div id="box-linear">
+									<iframe src="https://iamramengirl.github.io./casesperday_linear.html" style="margin:0; padding:0; position:relative; width:978px; height: 478px;" scrolling="no"></iframe>
+									<ul class="tabs group">
+										<li class="cur"><a href="#box-linear">Linear</a></li>
+										<li><a href="#box-newcases">New Cases</a></li>
+										<li><a href="#box-confirmed-sma">Confirmed & 7-Day Moving Average</a></li>
+										<li><a href="#box-recoveries-sma">Recoveries & 7-Day Moving Average</a></li>
+										<li><a href="#box-deaths-sma">Deaths & 7-Day Moving Average</a></li>
+									</ul>
+								</div>
+								<div id="box-newcases">
+									<iframe src="https://iamramengirl.github.io./casesperday_newcases.html" style="margin:0; padding:0; position:relative; width:978px; height: 478px;" scrolling="no"></iframe>
+									<ul class="tabs group">
+										<li><a href="#box-linear">Linear</a></li>
+										<li class="cur"><a href="#box-newcases">New Cases</a></li>
+										<li><a href="#box-confirmed-sma">Confirmed & 7-Day Moving Average</a></li>
+										<li><a href="#box-recoveries-sma">Recoveries & 7-Day Moving Average</a></li>
+										<li><a href="#box-deaths-sma">Deaths & 7-Day Moving Average</a></li>
+									</ul>
+								</div>
+								<div id="box-confirmed-sma">
+									<iframe src="https://iamramengirl.github.io./casesperday_confirmed_SMA.html" style="margin:0; padding:0; position:relative; width:978px; height: 478px;" scrolling="no"></iframe>
+									<ul class="tabs group">
+										<li><a href="#box-linear">Linear</a></li>
+										<li><a href="#box-newcases">New Cases</a></li>
+										<li class="cur"><a href="#box-confirmed-sma">Confirmed & 7-Day Moving Average</a></li>
+										<li><a href="#box-recoveries-sma">Recoveries & 7-Day Moving Average</a></li>
+										<li><a href="#box-deaths-sma">Deaths & 7-Day Moving Average</a></li>
+									</ul>
+								</div>
+								<div id="box-recoveries-sma">
+									<iframe src="https://iamramengirl.github.io./casesperday_recoveries_SMA.html" style="margin:0; padding:0; position:relative; width:978px; height: 478px;" scrolling="no"></iframe>
+									<ul class="tabs group">
+										<li><a href="#box-linear">Linear</a></li>
+										<li><a href="#box-newcases">New Cases</a></li>
+										<li><a href="#box-confirmed-sma">Confirmed & 7-Day Moving Average</a></li>
+										<li class="cur"><a href="#box-recoveries-sma">Recoveries & 7-Day Moving Average</a></li>
+										<li><a href="#box-deaths-sma">Deaths & 7-Day Moving Average</a></li>
+									</ul>
+								</div>
+								<div id="box-deaths-sma">
+									<iframe src="https://iamramengirl.github.io./casesperday_deaths_SMA.html" style="margin:0; padding:0; position:relative; width:978px; height: 478px;" scrolling="no"></iframe>
+									<ul class="tabs group">
+										<li><a href="#box-linear">Linear</a></li>
+										<li><a href="#box-newcases">New Cases</a></li>
+										<li><a href="#box-confirmed-sma">Confirmed & 7-Day Moving Average</a></li>
+										<li><a href="#box-recoveries-sma">Recoveries & 7-Day Moving Average</a></li>
+										<li class="cur"><a href="#box-deaths-sma">Deaths & 7-Day Moving Average</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -309,7 +403,7 @@
 		<div class="grid grid-pad">
 			<div class="col-1-1 mobile-col-1-1 push-1-1">
 				<div class="content">
-					<div class="map-widget">
+					<div class="percountrytrajectory-widget">
 						<iframe src="https://iamramengirl.github.io./percountrytrajectory.html" style="margin:0; padding:0; left:-10px; top:-10px; position:relative; width:1005px; height: 520px; background-color: transparent;" scrolling="no"></iframe>
 					</div>
 				</div>
@@ -328,9 +422,9 @@
 
 		<script>
 			// Date
-			document.getElementById("lastupdatedt").innerHTML = "(Wed) May 6, 2020";
+			document.getElementById("lastupdatedt").innerHTML = "(Thur) May 7, 2020";
 			// Stats
-			var statsjson = '{"confirmed":"10,004", "recovered":"1,506", "deaths":"658", "active":"7,840", "tests": "140,134", "pop":"0.009", "cfr":"6.58", "crr":"15.05", "pctfemale":45, "pctmale":55, "youngest":0, "oldest":102}';
+			var statsjson = '{"confirmed":"10,343", "recovered":"1,618", "deaths":"685", "active":"8,040", "tests": "144,583", "pop":"0.009", "cfr":"6.62", "crr":"15.64", "pctfemale":45, "pctmale":55, "youngest":0, "oldest":101}';
 			var statsobj = JSON.parse(statsjson);
 			document.getElementById("confirmed").innerHTML = statsobj.confirmed;
 			document.getElementById("pop").innerHTML = statsobj.pop;
