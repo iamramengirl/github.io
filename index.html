@@ -367,7 +367,7 @@
 			</div>
 		</div>
 		<!-- Gender & Age Stats -->
-		<div class="grid grid-pad">
+		<!--div class="grid grid-pad">
 			<div class="col-3-10 mobile-col-3-10">
 				<div class="content">
 					<div class="gender-box">
@@ -397,23 +397,26 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div-->
 		<!-- Footer -->
 		<div class="grid grid-pad">
 			<div class="col-1-1">
 				<div class="content">
 					<div class="footer">
-					    Data Source: <a href="https://www.worldometers.info/coronavirus/">Worldometers</a>&nbsp;&#9671;&nbsp;<a href="https://github.com/CSSEGISandData/COVID-19">John Hopkins University</a>&nbsp;&#9671;&nbsp;<a href="https://ncovtracker.doh.gov.ph/">DOH NCOV Tracker</a>
+					    Data Source: <a href="https://www.worldometers.info/coronavirus/">Worldometers</a>&nbsp;&#9671;&nbsp;<a href="https://github.com/CSSEGISandData/COVID-19">John Hopkins University</a>
 					</div>
+					<!--div class="footer">
+					    Data Source: <a href="https://www.worldometers.info/coronavirus/">Worldometers</a>&nbsp;&#9671;&nbsp;<a href="https://github.com/CSSEGISandData/COVID-19">John Hopkins University</a>&nbsp;&#9671;&nbsp;<a href="https://ncovtracker.doh.gov.ph/">DOH NCOV Tracker</a>
+					</div-->
 				</div>
 			</div>
 		</div>
 
 		<script>
 			// Date
-			document.getElementById("lastupdatedt").innerHTML = "(Mon) May 11, 2020";
+			document.getElementById("lastupdatedt").innerHTML = "(Thur) May 14, 2020";
 			// Stats
-			var statsjson = '{"confirmed":"11,086", "recovered":"1,999", "deaths":"726", "active":"8,361", "tests": "173,144", "pop":"0.01", "cfr":"6.55", "crr":"18.03", "pctfemale":46, "pctmale":54, "youngest":0, "oldest":101}';
+			var statsjson = '{"confirmed":"11,876", "recovered":"2,337", "deaths":"790", "active":"8,749", "tests": "189,469", "pop":"0.011", "cfr":"6.65", "crr":"19.68", "pctfemale":46, "pctmale":54, "youngest":0, "oldest":101}';
 			var statsobj = JSON.parse(statsjson);
 			document.getElementById("confirmed").innerHTML = statsobj.confirmed;
 			document.getElementById("pop").innerHTML = statsobj.pop;
